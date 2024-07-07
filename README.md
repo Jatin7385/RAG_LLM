@@ -10,6 +10,9 @@ Playing around with RAG - LLM's exploring certain use cases.
 1) pip install langchain-community
 2) pip install chromadb(If build fails for chromadb-hnswlib, you need to sudo apt-get install libfuse I think it was. lib something something atlease)
 3) Setup Ollama -> curl -fsSL https://ollama.com/install.sh | sh
+4) ollama serve
+5) ollama pull nomic-embed-text
+6) ollama pull mistral
 
 ## To Run the project : 
 1) Change the path of data in data_loader.py/load_documents()(DATA_PATH)
