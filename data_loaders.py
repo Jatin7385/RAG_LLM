@@ -14,8 +14,7 @@ from langchain_community.embeddings.ollama import OllamaEmbeddings # Run complet
 from langchain_community.vectorstores import Chroma
 
 # Document Loaders
-def load_documents():
-    DATA_PATH = "./data/"
+def load_documents(DATA_PATH):
     document_loader = PyPDFDirectoryLoader(DATA_PATH)
     return document_loader.load()
 
@@ -103,7 +102,8 @@ def calculate_chunk_ids(chunks):
 
 # DRIVER CODE
 
-# Load Documents
+# Load the document
+# print("Loading data from Path : ", path)
 docs = load_documents()
 
 # Split Documents to chunks

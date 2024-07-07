@@ -5,6 +5,7 @@ from langchain.prompts import ChatPromptTemplate
 
 from langchain_community.llms.ollama import Ollama
 
+
 PROMPT_TEMPLATE = """
 Answer the question based only on the following context:
 {context}
@@ -57,12 +58,18 @@ def query_rag(query_text):
 
 def main():
     # Create CLI
-    parser = argparse.ArgumentParser()
-    # parser.add_argument("query_text", type=str, help="Your query...")
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument("--query_text", type=str, help="Your query...")
+    # parser.add_argument("data_path", type=str, help="Data path...")
     # args = parser.parse_args()
     # query_text = args.query_text
-    query_text = "How to get started with AEM?"
-    query_rag(query_text)
+    # path = args.data_path
+
+    while True:
+        query_text = input("Enter your query here : ")
+        # print("Query : ", query_text)
+        # query_text = "How to get started with AEM?"
+        query_rag(query_text)
 
 
 if __name__ == "__main__":
